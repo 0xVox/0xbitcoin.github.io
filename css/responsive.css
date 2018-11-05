@@ -1,5 +1,5 @@
 
-@media (min-width: 1921px) { 
+@media (min-width: 1921px) {
     #welcomeArea{
         background: url(../img/homebg.png) no-repeat top;
         background-size: cover;
@@ -7,16 +7,16 @@
     }
  }
 
-@media (max-width: 740px) { 
+@media (max-width: 740px) {
     #testimonial .slick-arrow {
         display: none!important;
     }
  }
 
-@media (max-width: 1199.98px) { 
+@media (max-width: 1199.98px) {
     #welcomeArea .left .searcAddress input {
         width: 300px;
-    } 
+    }
     #hiw .box.box1 i::after, #hiw .box.box2 i::after, #hiw .box.box3 i::after {
         display: none;
     }
@@ -47,18 +47,16 @@
     #mainHeader .viewPlan a {
         width: 120px;
     }
-    
+
  }
 
-@media (max-width: 991.98px) { 
+@media (max-width: 991.98px) {
 
     #navbarSupportedContent {
-    background: -webkit-linear-gradient(to right, #efb1fd, #5271c4);
-    background: -moz-linear-gradient(to right, #efb1fd, #5271c4);
-    background: linear-gradient(to right, #efb1fd, #5271c4);
+    background: #ff7f00;
     }
     #navbarSupportedContent ul{
-        padding: 30px;  
+        padding: 30px;
     }
     header.header {
         padding: 10px 0px 10px;
@@ -127,7 +125,7 @@
     #footer {
         padding: 203px 0px 27px;
     }
-  
+
     .table tr th:first-child {
         padding-left: 15px;
     }
@@ -141,11 +139,11 @@
     #footer .copyright {
         margin-top: 124px;
     }
-   
+
 
  }
 
-@media (max-width: 767.98px) { 
+@media (max-width: 767.98px) {
     h1 {
         font-size: 36px;
     }
@@ -211,7 +209,7 @@
 
 }
 
-@media (max-width: 575.98px) { 
+@media (max-width: 575.98px) {
     header.header {
         padding: 10px 15px 10px;
     }
@@ -223,8 +221,8 @@
         margin-right: 140px;
     }
  }
- 
-@media (max-width: 510px) { 
+
+@media (max-width: 510px) {
     #investors .box {
         margin-left: 110px;
         margin-right: 110px;
@@ -258,7 +256,7 @@
 
 
  @media (max-width: 400px){
-    #investors .box { 
+    #investors .box {
         margin-left: 50px;
         margin-right: 50px;
     }
@@ -302,7 +300,7 @@
     h2 {
         font-size: 28px;
     }
-    
+
     .faq-accordian .panel-group .panel .panel-heading .panel-title a::after {
         display: none;
     }
