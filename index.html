@@ -8,7 +8,7 @@
 
 <head>
 	<style>
-	#container {
+	#fundraiser-progress-container {
 			width: 400px;
 			height: 45px;
 			margin: -15px 0 0 -200px;
@@ -17,11 +17,11 @@
 			left: 50%;
 			background-color: #dddddd;
 	}
-	#myBar {
+	#fundraiser-progress-bar {
 			width: 0%;
 			height: 45px;
+			line-height: 45px; /* center text vertically; should match height */
 			background-color: #002059;
-			line-height: 30px; /* To center it vertically */
 			color: white;
 	}
 	</style>
@@ -230,9 +230,9 @@
 												<div class="tab-content" id="pills-tabContent">
 													<div class="tab-pane fade show active" id="pills-deposit" role="tabpanel" aria-labelledby="pills-deposit-tab">
 														<div class="table-responsive">
-																	<div id="container">
-																		<div id="myProgress">
-																			<div id="myBar">0%</div>
+																	<div id="fundraiser-progress-container">
+																		<div id="fundraiser-progress">
+																			<div id="fundraiser-progress-bar">0%</div>
 																		</div>
 																	</div>
 																	<script type="text/javascript" src="js/ethjs.js"></script>
