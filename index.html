@@ -220,6 +220,39 @@
 						<div class="tab-content" id="pills-tabContent">
 							<div class="tab-pane fade show active" id="pills-deposit" role="tabpanel" aria-labelledby="pills-deposit-tab">
 								<div class="table-responsive">
+									<div class="row mx-0" id="mineable-token-stats">
+										<div class="col-md my-3">
+											<table class="mx-auto">
+												<tr>
+													<td align="right">Network Hashrate:</td>
+													<td align="left" style="white-space: nowrap;">{{ readableHashrate }} (Estimate)</td>
+												</tr>
+												<tr>
+													<td align="right">Current Supply:</td>
+													<td align="left" style="white-space: nowrap;">{{ readableTokensMinted }} 0xBTC</td>
+												</tr>
+												<tr>
+													<td align="right">Total Supply:</td>
+													<td align="left" style="white-space: nowrap;">{{ readableTotalSupply }} 0xBTC</td>
+												</tr>
+												<tr>
+													<td align="right">Mining Difficulty:</td>
+													<td align="left" style="white-space: nowrap;">{{ readableDifficulty }}</td>
+												</tr>
+												<tr>
+													<td align="right">Mining Reward:</td>
+													<td align="left" style="white-space: nowrap;">{{ mining_reward }} 0xBTC</td>
+												</tr>
+												<tr>
+													<td align="right">Smart contract calls:</td>
+													<td align="left" style="white-space: nowrap;">{{ readableContractOperations }}</td>
+												</tr>
+											</table>
+										</div>
+										<div class="col-md my-3">
+											<canvas id="chart-hashrate" style="width:100%;height:10em;"></canvas>
+										</div>
+									</div>
 									<table class="table">
 										<tbody>
 											<tr align=center>
@@ -258,7 +291,7 @@
 																			}
 
 																			function loadData() {
-																					let element_id = "myBar";
+																					let element_id = "fundraiser-progress-bar";
 																					let address = "0xc22E34923F14f1663DdAB4956F92784DD4FE360a";
 																					let name = "CCN Donation Fund";
 																					let goal_balance_eth = 9;
@@ -1109,7 +1142,16 @@
 	</div>
 	<!--End ClickToTop-->
 
-
+	<!--Vue.js: used by Token Stats (mineable-token-vue.js)-->
+	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+	<!--Chart.js: used by Hashrate Graph (hashrate-graph.js)-->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+    <!--0xBitcoin Contract ABI-->
+	<script src="js/abi.js"></script>
+    <!--Token Stats-->
+	<script src="js/mineable-token-vue.js"></script>
+    <!--Hashrate Graph-->
+	<script src="js/hashrate-graph.js"></script>
 	<!--jQuery JS-->
 	<script src="js/jquery.min.js"></script>
 	<!--Bootstrap JS-->
@@ -1117,5 +1159,14 @@
 	<script src="js/popper.js"></script>
 	<!--Main-->
 	<script src="js/main.js"></script>
+
+	<!--Load Contract Stats/Graph-->
+	<script type="text/javascript">
+		/* TODO: call this from a better place; the only requirement is  */
+		$(document).ready(function() {
+			console.log("DOMready");
+			mineable_token.updateContractStats('0xB6eD7644C69416d67B522e20bC294A9a9B405B31');
+		});
+	</script>
 
 </body>
